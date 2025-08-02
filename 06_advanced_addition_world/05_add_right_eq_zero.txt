@@ -1,0 +1,13 @@
+cases b with d
+
+-- b is zero.
+rw [add_zero]
+intro h
+exact h
+
+-- b is a successor.
+rw [add_succ]
+intro h
+symm at h
+apply zero_ne_succ at h
+cases h
