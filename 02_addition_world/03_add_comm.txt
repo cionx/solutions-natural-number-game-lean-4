@@ -1,9 +1,11 @@
 induction a with d hd
 
+-- base case
 rw [zero_add]
 rw [add_zero]
 rfl
 
+-- induction step
 rw [succ_add]
 rw [add_succ]
 rw [hd]
