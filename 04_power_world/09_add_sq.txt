@@ -1,0 +1,12 @@
+rw [pow_two]
+rw [add_mul]
+repeat rw [mul_add]
+repeat rw [← pow_two]
+rw [add_assoc]
+nth_rewrite 2 [← add_assoc]
+rw [mul_comm b]
+rw [← two_mul]
+nth_rewrite 2 [add_comm]
+repeat rw [← add_assoc]
+rw [← mul_assoc]
+rfl
