@@ -1,14 +1,17 @@
 induction b with d hd
 
--- base case
+-- Base case.
 rw [add_zero]
 rw [zero_add]
 rfl
 
--- induction step
+-- Induction step.
+-- left side
 rw [add_succ]
 rw [succ_add]
+-- right side
 rw [succ_add]
 rw [add_succ]
+-- compare
 rw [hd]
 rfl
