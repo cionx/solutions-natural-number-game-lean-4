@@ -1,0 +1,17 @@
+induction n with d hd
+
+-- Base case.
+repeat rw [pow_zero]
+rw [mul_one]
+rfl
+
+-- Induction step.
+repeat rw [pow_succ]
+rw [hd]
+-- adjusting the right side
+nth_rewrite 2 [mul_assoc]
+nth_rewrite 3 [← mul_assoc]
+nth_rewrite 2 [mul_comm a]
+repeat rw [← mul_assoc]
+-- compare
+rfl
