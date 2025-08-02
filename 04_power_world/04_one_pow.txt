@@ -1,0 +1,11 @@
+induction m with d hd
+
+-- Base case.
+rw [pow_zero]
+rfl
+
+-- Induction step.
+rw [pow_succ]
+rw [hd]
+rw [mul_one]
+rfl
