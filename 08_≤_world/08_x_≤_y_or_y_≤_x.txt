@@ -1,0 +1,33 @@
+induction x with a ha
+
+-- Base case: x = 0.
+left
+exact zero_le y
+
+-- Induction step: x = succ a.
+cases y with b
+-- case y = 0
+right
+exact zero_le (succ a)
+-- case y = succ b
+cases ha
+--   subcase a ≤ succ b
+--   write a + k = succ b
+cases h with k hk
+cases k with l
+--     subsubcase k = 0
+rw [add_zero] at hk
+right
+rw [hk]
+exact le_succ_self a
+--     subsubcase k = succ l
+rw [add_succ] at hk
+rw [← succ_add] at hk
+left
+use l
+exact hk
+--   subcase succ b ≤ a
+right
+apply le_trans (succ b) a (succ a)
+exact h
+exact le_succ_self a
