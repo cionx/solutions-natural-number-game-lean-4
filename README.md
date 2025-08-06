@@ -1,4 +1,4 @@
-# Solutions to the Natural Number Game
+# Solutions to the Natural Number Game (Lean 4 version)
 
 This repository contains my solutions to the [Natural Number Game (Lean 4 version)][1].
 
