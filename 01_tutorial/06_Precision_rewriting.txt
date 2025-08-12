@@ -1,3 +1,2 @@
-rw [add_zero c]
-rw [add_zero b]
+rw [add_zero c, add_zero b]
 rfl

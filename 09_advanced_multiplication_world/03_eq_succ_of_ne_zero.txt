@@ -1,7 +1,3 @@
 cases a with b
-
--- Case a = 0.
-tauto
-
--- Case a = succ b.
-tauto
+· tauto
+· tauto

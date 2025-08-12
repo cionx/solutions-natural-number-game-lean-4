@@ -1,16 +1,12 @@
 induction n with d hd
-
--- Base case.
-rw [mul_zero]
-repeat rw [pow_zero]
-rfl
-
--- Induction step
--- left side
-rw [pow_succ]
-rw [hd]
-rw [← pow_add]
--- right side
-rw [mul_succ]
--- compare
-rfl
+· rw [mul_zero]
+  repeat rw [pow_zero]
+  rfl
+· -- left side
+  rw [pow_succ]
+  rw [hd]
+  rw [← pow_add]
+  -- right side
+  rw [mul_succ]
+  -- compare both sides
+  rfl

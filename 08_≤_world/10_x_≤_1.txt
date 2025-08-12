@@ -1,13 +1,9 @@
 cases x
-
--- Case 1: x = 0.
-left
-rfl
-
--- Case 2: x = succ a.
-rw [one_eq_succ_zero] at hx
-apply succ_le_succ at hx
-apply le_zero at hx
-right
-rw [hx]
-exact one_eq_succ_zero
+· left
+  rfl
+· rw [one_eq_succ_zero] at hx
+  apply succ_le_succ at hx
+  apply le_zero at hx
+  right
+  rw [hx]
+  exact one_eq_succ_zero

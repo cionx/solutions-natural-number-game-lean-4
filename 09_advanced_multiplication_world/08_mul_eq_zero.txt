@@ -1,15 +1,9 @@
 cases a with x
-
--- Case 1: a = 0.
-tauto
-
--- Case 2: a = succ x.
-cases b with y
--- Case 2.1: b = 0.
-tauto
--- Case 2.2: b = succ y
-have hxy : succ x * succ y ≠ 0
-apply mul_ne_zero
-exact succ_ne_zero x
-exact succ_ne_zero y
-tauto
+· tauto
+· cases b with y
+  · tauto
+  · have hxy : succ x * succ y ≠ 0
+    · apply mul_ne_zero
+      · exact succ_ne_zero x
+      · exact succ_ne_zero y
+    tauto

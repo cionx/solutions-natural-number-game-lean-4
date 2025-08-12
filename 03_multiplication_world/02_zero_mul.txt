@@ -1,11 +1,7 @@
 induction m with d hd
-
--- Base case.
-rw [mul_zero]
-rfl
-
--- Induction step.
-rw [mul_succ]
-rw [hd]
-rw [add_zero]
-rfl
+· rw [mul_zero]
+  rfl
+· rw [mul_succ]
+  rw [hd]
+  rw [add_zero]
+  rfl
