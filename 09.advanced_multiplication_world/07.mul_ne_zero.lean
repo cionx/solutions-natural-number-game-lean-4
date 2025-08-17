@@ -4,8 +4,8 @@ apply mul_le_mul_right 1 a b at ha
 rw [one_mul] at ha
 have h : 1 ≤ a * b
 · apply le_trans 1 b (a * b)
-  exact hb
-  exact ha
+  · exact hb
+  · exact ha
 intro h0
 rw [h0] at h
 apply le_zero at h
